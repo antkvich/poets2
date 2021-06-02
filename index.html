@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body class="bg-secondary">
+    <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" id="brand">Поэты беларуси</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto me-2">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link lang" id="main">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="poets.html" class="nav-link lang" id="poets">Поэты</a>
+                    </li>
+                    <div class="me-auto navbar-nav">
+                        <button class="btn btn-outline-light b-flex me-2" id="ru">RU</button>
+                        <button class="btn btn-outline-light b-flex me-2" id="en">EN</button>
+                    </div>
+
+
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="carousel slide" id="carouselControls" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img class="d-block w-100 " src="imgs/book3.jpg" >
+                    <div class="carousel-caption d-none d-md-block ">
+                        <h5 class="fs-1">Добро пожаловать</h5>
+                        <p class="fs-1">На этом сайте мы расскажем вам расскажем вам про поэтов Беларуси</p>
+                    </div>
+                </div>
+                <div class="carousel-item  " data-bs-interval="5000">
+                    <img class="d-block w-100" src="imgs/book1.jpg" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fs-1">Биография</h5>
+                        <p class="fs-1">Здесь вы найдете информацию о жизни белорусских поэтов</p>
+                    </div>
+                </div>
+                <div class="carousel-item " data-bs-interval="5000">
+                    <img class="d-block w-100" src="imgs/book2.jpg" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class=" fs-1">Игтересные факты</h5>
+                        <p class=" fs-1">На этом сайте мы расскажем вам расскажем вам про поэтов Беларуси</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <h1 class="display-2 text-center">
+            Поэт дня
+        </h1>
+        <div id="pLabel"></div>
+        <hr/>
+        <div class="author">
+            <h2 class=" text-center">
+                Авторы сайта
+            </h2>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <img src="imgs/anton.jpg" class="rounded mx-auto d-block"/>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <img src="imgs/danik.jpg" class="rounded mx-auto d-block align-middle"/>
+                </div>
+                <div class="col-md-2"></div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <h3 class="text-center">
+                        Колесникович Антон
+                    </h3>
+                    <h5>
+                        <a href="https://github.com/antkvich" class="text-center nav-link link-light">
+                            GitHub
+                        </a>
+                    </h5>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <h3 class="text-center">
+                        Кавтунов Даниил
+                    </h3>
+                    <h5>
+                        <a href="https://github.com/kavtunchik" class="text-center nav-link link-light">
+                            GitHub
+                        </a>
+                    </h5>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <script src="js/language.js"></script>
+        <script type="text/babel" src="js/reactIndex.js"></script>
+    </main>
+</body>
+</html>
